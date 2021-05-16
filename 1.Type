@@ -1,0 +1,117 @@
+package kr.co.bitcamp.Variable;
+
+/*
+ * 자바의 데이터타입(자료형)에 대해서 각 타입의 사이즈와 함께 설명해보시오
+ * 
+ *  정수형의 경우 사이즈와 범위를 말해보시오
+ * 
+ */
+
+/*
+ * 크게봤을 때 --> 기본형 타입, 참조형 타입
+ * 
+ * 1. 기본형 타입(Primitive Data Type) --> 8개
+ * 
+ * [정수형] --> byte(1byte)
+ *            short(2byte)
+ *            int(4byte)**
+ *            long(8byte)
+ * 
+ * [실수형] --> float(4byte)
+ *            double(8byte)**
+ *            
+ * [문자형] --> char(2byte) 문자 한개. 참고로 문자열을 다루는 타입은 없다.
+ * [부울형](논리형: 참 or 거짓) --> boolean(1byte) --> true, false
+ *            
+ * ---------------------------------------------------------
+ *            
+ * 2. 참조형 타입(reference Data type) 위 기본형에 속하지 않는 데이터형들 --> *객체지향 개념*
+ * 
+ * 대표적인 것들 --> 클래스(class), 배열(array), 인터페이스(interface), 문자열(String)...
+ * 참조형 변수의 특징 --> 데이터가 저장된 메모리 주소 값을 저장하는 변수이다.
+ * 
+ */
+public class Variable01 {
+
+}
+
+package kr.co.bitcamp.Variable;
+
+public class Variable02 {
+    public static void main(String[] args) {
+        System.out.println(Byte.BYTES);  // 바이트 계산
+        System.out.println(Byte.SIZE);   // 비트 계산
+        
+        System.out.println(Short.BYTES);
+        System.out.println(Short.SIZE);
+        System.out.println();
+        
+        // byte, short, int long
+        System.out.println("byte:\t" +Byte.BYTES + "(바이트)" + "-->" + "Byte.SIZE + " + "(비트)\t" + Byte.MAX_VALUE + "~" + Byte.MIN_VALUE);
+        System.out.println("Short:\t" +Short.BYTES + "(바이트)" + "-->" + "Byte.SIZE + " + "(비트)\t" + Short.MAX_VALUE + "~" + Short.MIN_VALUE);
+        System.out.println("Integer:\t" +Integer.BYTES + "(바이트)" + "-->" + "Byte.SIZE + " + "(비트)\t" + Integer.MAX_VALUE + "~" + Integer.MIN_VALUE);
+        System.out.println("Long:\t" +Long.BYTES + "(바이트)" + "-->" + "Byte.SIZE + " + "(비트)\t" + Long.MAX_VALUE + "~" + Long.MIN_VALUE);
+        System.out.println("Character:\t" +Character.BYTES + "(바이트)" + "-->" + "Byte.SIZE + " + "(비트)\t" + (int)Character.MAX_VALUE + "~" + (int)Character.MIN_VALUE);
+        
+        
+        
+    }
+
+}
+
+package kr.co.bitcamp.Variable;
+
+/*
+ * 출력시 많이 사용되는 print(), println(), printf() 형식 등에 대해 설명해보세요
+ */
+
+public class VariableDatatype {
+    private static String str1;
+
+    public static void main(String[] args) {
+        
+        // 변수 선언
+        int a;
+        int b = 33; int c = 90; // 지역변수(local variable)는 선언 후 초기화해야됨
+        double d;
+        char e;
+        
+        // 선언된 변수에 값을 대입
+        
+        a = 10;
+        d = 3.14;
+        e = 'A';
+        
+        // 출력
+        System.out.println(b);
+        
+        // 같은 값으로 초기화
+        String str1, str2, str3;
+        
+        str1 = str2 = str3 = "Korea";
+        System.out.println("여러 문자열 변수 한꺼번에 초기화 : " + str1 + str2 + str3);
+        
+        int i,j,k;
+        i = j = k = 100;
+        System.out.println("여러 정수형 변수 한꺼번에 초기화 : " + i + j + k);
+        
+        float f = 9.81F;
+        double dd = 3.1415;
+        boolean bl = true;
+        byte by = 10;
+        // printf() --> 지시자를 사용
+        // %d(정수), %f(소수점 형식), %c(문자), %s(문자열), %b(불리언). %n(줄바꿈), %e(지수), %o(8진수), %x(16진수)
+        
+        System.out.printf("나는 %d살의 대학생입니다. 소수점 형식 --> %f, %.4f, 문자 --> %c, %b %n", b, f, dd, e, bl);
+        System.out.printf("10진수 10은 8진수로는 %o이고 16진수로는 %x이다.", by, by);
+        
+        
+                
+        
+        
+        
+        
+     
+    }
+
+}
