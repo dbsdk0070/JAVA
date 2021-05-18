@@ -1,0 +1,38 @@
+package co.kr.bitcamp.call;
+
+public class PrimitiveParamTest2 {
+    public static void main(String[] args) {
+        
+        A a = new A();
+        a.data = 77;
+        System.out.println("메서드 호출 main()내의 값: " + a.data);
+        
+        /*
+         * Call by reference(주소에 의한 호출)
+         * 참조형 (값을 읽고 수정도 가능함)
+         * 
+         */
+        
+        PrimitiveParamTest2.dataChange(a);
+        
+        System.out.println("dataChange() 호출");
+        System.out.println("메서드 호출 후 main()내의 값 : " + a.data);
+        
+    }
+    // int[], double[], String... ==> 참조변수형태
+    public static void dataChange(A a) {        // A는 참조형, a는 주소 값
+        
+        a.data = 44;
+        
+        /*
+         *  a라는 주소값이 매개변수로 넘어옴 => 주소를 공유하게 됨
+         *  호출한 곳에서 영향을 무조건 받음.
+         */
+        
+        
+        System.out.println("dataChange()내의 값 : " + a.data);
+        return;
+        
+    }
+    
+}
